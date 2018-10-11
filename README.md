@@ -34,9 +34,11 @@ Document level labeling is used to train the models that classify documents into
 
 ## Training Model
 After Labeling more data run:
-- `./classifier train new_data`
+- `./classifier train new_data_directory`
 
-This will output a zip file containing the weights of the new model
+"new\_data\_directory" must be a path to a directory containing 3 folders entitled "nonpersonal", "personal", and "sensitive"
+This will replace the weights in "../models/document-clf/" that the program uses to predict.
+WARNING: this will replace the previous weights in document-clf, destroying them. Make sure you've backed up these weights if you intend to keep them.
 
 
 
