@@ -1,0 +1,30 @@
+The following are the metrics relating to the document level classifier (neural network). 
+Note that the testing set used to generate this was constrained to 5% of the data in order
+to use more data for training.
+
+Classifier accuracy: 0.9069767441860465
+F-3 scores: [0.99502488 0.82278481 0.84507042]
+Confusion matrix:
+[[20  0  0]
+ [ 1 13  2]
+ [ 0  1  6]]
+Recalls: [1.0, 0.8125, 0.8571428571428571]
+
+
+The following data was generated with a train/test split of 70%/30%:
+
+Classifier accuracy: 0.88671875
+F-3 scores: [0.88571429 0.875      0.92307692]
+Confusion matrix:
+[[93  4  9]
+ [ 3 98 12]
+ [ 0  1 36]]
+Recalls: [0.8773584905660378, 0.8672566371681416, 0.972972972972973]
+High confidence results:
+Classifier accuracy: 0.9552238805970149
+F-3 scores: [0.96654275 0.93641618 0.97633136]
+Confusion matrix:
+[[78  1  2]
+ [ 0 81  6]
+ [ 0  0 33]]
+Recalls: [0.9629629629629629, 0.9310344827586207, 1.0]
