@@ -114,7 +114,7 @@ def run_model(filepath):
                         personal_lines.append(lines[i])
 
         pred_confidence = confidence(predicted_vec)/MAX_CONFIDENCE
-        results.append((path, predicted_class, high_probability_categories, personal_lines))
+        results.append((path, predicted_class, high_probability_categories, personal_lines, pred_confidence))
         print(f"Max confidence = {confidence(np.array([0, 1, 0]))}")
         print(f"File path: {path}")
         print(f"Predicted class: {predicted_class} with confidence {pred_confidence}")
