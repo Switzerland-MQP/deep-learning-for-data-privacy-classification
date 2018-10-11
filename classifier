@@ -79,7 +79,7 @@ def classify_impl(source, dest):
     nonpersonal_count = 0
     personal_count = 0
     sensitive_count = 0
-    for path, category, individual_categories, predicted_lines in results:
+    for path, category, individual_categories, predicted_lines, confidence in results:
         filename = path.replace(f"{source}/", "")
         print(f"File: {filename} is {category}")
         original_filename = f"{original_source_path}/{filename}"
@@ -87,6 +87,8 @@ def classify_impl(source, dest):
         predicted_lines = remove_duplicates(predicted_lines)
 
         output_file = ''
+        base_file_name = os.path.basename(filename)
+        filename = filename.replace(base_file_name, f"{confidence:.3f}-{base_file_name}")
         #  import ipdb
         #  ipdb.set_trace()
         if category[0] == 0:
