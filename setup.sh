@@ -17,5 +17,5 @@ if [ $os = "Darwin" ]; then
     sed -i -e 's/<al.h>/<OpenAL\/al.h>/g' deps/sphinxbase/src/libsphinxad/ad_openal.c
     sed -i -e 's/<alc.h>/<OpenAL\/alc.h>/g' deps/sphinxbase/src/libsphinxad/ad_openal.c
     python3 setup.py install
-    pip3 install -r requirements
+    pip3 install -r requirements.txt
 fi
