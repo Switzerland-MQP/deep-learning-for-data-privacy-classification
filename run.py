@@ -101,7 +101,7 @@ def run_model(filepath):
                 category = utils.all_categories_dict[i+1]
                 cutoff = cutoffs[category]
                 if predicted_categories[i+1] > cutoff:
-                    if category not in ["biometric", "sex-orientation", "sex-life", "unions", "philosophical", "political", "religion", "social", "cultural", "economic", "mental", "genetic"]:
+                    if category not in ["biometric", "psychological", "sex-orientation", "sex-life", "unions", "philosophical", "political", "religion", "social", "cultural", "economic", "mental", "genetic"]:
                         high_probability_categories.append(category)
         
         # Predict which lines are personal/sensitive
