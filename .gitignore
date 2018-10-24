@@ -110,9 +110,18 @@ venv.bak/
 
 
 
-
-/final_clf/documents/
-
-
 /source/
 /output/
+
+/models/document-clf/model.json
+models/document-clf/model.h5
+models/document-clf/preprocessing.pickle
+
+/models/category-clf/model.json
+/models/category-clf/model.h5
+/models/category-clf/preprocessing.pickle
+/models/category-clf/cutoffs.pickle
+
+/models/line-clf/model.json
+/models/line-clf/model.h5
+/models/line-clf/preprocessing.pickle

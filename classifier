@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import click
 
+import document_clf_train
 import plaintext_converter
 import run
 import json
@@ -154,6 +155,15 @@ def full(source, dest):
     classify_impl(intermediate_directory, dest)
     shutil.rmtree(intermediate_directory)
 
+
+@cli.command()
+@click.argument("source")
+def train(source):
+    if not os.path.isdir(source):
+        print("Please give a directory as the first argument")
+        return
+
+    document_clf_train.document_clf(source)
 
 def validate_directories(source, dest):
     if not os.path.isdir(source):
